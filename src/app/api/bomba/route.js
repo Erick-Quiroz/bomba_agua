@@ -17,6 +17,7 @@ export async function GET() {
         status: 200,
         headers: {
           "Content-Type": "text/plain", // Especifica que el contenido es texto plano
+          "Cache-Control": "no-store", // Deshabilita el almacenamiento en caché
         },
       });
     } else {
@@ -25,6 +26,7 @@ export async function GET() {
         status: 404,
         headers: {
           "Content-Type": "text/plain", // Especifica que el contenido es texto plano
+          "Cache-Control": "no-store", // Deshabilita el almacenamiento en caché
         },
       });
     }
@@ -35,6 +37,7 @@ export async function GET() {
       status: 500,
       headers: {
         "Content-Type": "text/plain", // Especifica que el contenido es texto plano
+        "Cache-Control": "no-store", // Deshabilita el almacenamiento en caché
       },
     });
   }

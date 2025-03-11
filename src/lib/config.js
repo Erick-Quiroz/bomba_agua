@@ -1,7 +1,7 @@
 // Importando el paquete mysql2 para la configuración de la base de datos
 import mysql from "mysql2/promise";
 
-/**
+/**asdasdasd
  * Función para ejecutar consultas en la base de datos MySQL
  */
 export async function query({ query, values = [] }) {
