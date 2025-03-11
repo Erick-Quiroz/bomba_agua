@@ -1,0 +1,15 @@
+datasource db {
+  provider = "mysql"
+  url      = "mysql://root:M6cdqQovN67NFpJP29GdVG91s5FkQGa06GKIm7Wpz4spdXzeYdgNyzmP5rkpKtr8@147.93.118.204:5433/bomba"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model bomba {
+  id        Int      @id @default(autoincrement())
+  state     Boolean
+}
+
+

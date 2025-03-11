@@ -1,16 +1,15 @@
-import { query } from "../../../lib/config";
+import prisma from "../../../lib/prisma";
 
 export async function GET() {
   try {
     // Ejecuta una consulta para obtener el valor de 'state' del registro con id 1
-    const result = await query({
-      query: "SELECT state FROM state WHERE id = 1",
-      values: [],
+    const bomba = await prisma.bomba.findUnique({
+      where: { id: 1 },
     });
 
     // Verifica si se encontró el registro
-    if (result.length > 0) {
-      const stateValue = result[0].state;
+    if (bomba) {
+      const stateValue = bomba.state.toString();
 
       // Retorna una respuesta en formato texto con un código de estado 200
       return new Response(stateValue, {
